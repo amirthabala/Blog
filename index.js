@@ -118,13 +118,22 @@ fastify.delete('/deleteItems', async (request, reply) => {
       }
 })
 
-let transporter = nodemailer.createTransport({
+var transporter = nodemailer.createTransport({
+  host: "smtp.mailtrap.io",
+  port: 2525,
+  auth: {
+    user: "383168fd6956f3",
+    pass: "c694954cd85282"
+  }
+});
+
+/*let transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
       user: 'varsha2020cbe@gmail.com', 
       pass: 'Mouse100*'
     }
-})
+})*/
   
 otp = ""
   
@@ -138,6 +147,7 @@ fastify.get("/sendmail",function(req,res){
     console.log("emailpart" , req.query.mail);
     let currOTP = generateOTP();
     let mailOptions = {
+      from: 'varsha2020cbe@gmail.com',
       to: req.query.mail,
       subject: "OTP for Your requested Blog",
       html: `<h1>Your OTP for BLOGGING is</h1><p>`+currOTP+`</p>`
