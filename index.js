@@ -21,6 +21,9 @@ try {
 const blog = require('./models/blog')
 const blogschema = require('./models/BlogData'); //new schema
 
+fastify.get('/', function (request, reply) {
+  reply.send({ hello: 'welcome' })
+})
 
 //new schema
 fastify.post('/postItems', async (request, reply) => {
@@ -176,6 +179,8 @@ fastify.post('/verify',async function(req,res){
     }
     
 })
+
+
 
 fastify.listen(process.env.PORT, '0.0.0.0', err => {
     if (err) throw err
