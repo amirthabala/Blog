@@ -1,0 +1,17 @@
+GET http://localhost:3000/sendmail
+
+###
+POST http://localhost:3000/verify
+Content-Type: application/json
+
+{
+    "otp":"vm30sy"
+}
+
+###
+POST http://localhost:3000/getBlog
+Content-Type: application/json
+
+{
+    "id":"610fd5fa9adf2f422c7259ba"
+}
