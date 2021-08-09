@@ -118,7 +118,7 @@ fastify.delete('/deleteItems', async (request, reply) => {
       }
 })
 
-var transporter = nodemailer.createTransport({
+/*var transporter = nodemailer.createTransport({
   host: "smtp.mailtrap.io",
   port: 2525,
   auth: {
@@ -126,14 +126,15 @@ var transporter = nodemailer.createTransport({
     pass: "c694954cd85282"
   }
 });
+*/
 
-/*let transporter = nodemailer.createTransport({
+let transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
       user: 'varsha2020cbe@gmail.com', 
       pass: 'Mouse100*'
     }
-})*/
+})
   
 otp = ""
   
