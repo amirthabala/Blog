@@ -121,8 +121,8 @@ fastify.delete('/deleteItems', async (request, reply) => {
 let transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: process.env.EMAIL,
-      pass: process.env.PASSWORD
+      user: 'varsha2020cbe@gmail.com', 
+      pass: 'Mouse100*'
     }
 })
   
